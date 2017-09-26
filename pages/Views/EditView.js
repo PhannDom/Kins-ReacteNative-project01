@@ -44,12 +44,17 @@ export default class EditView extends Component {
       this.setState({ price: text })
    	}
    	onButtonPressUpdate = (id, name, price) => {
-      var data = {
+      	var data = {
          "name": name,
          "price": price
-      }
-      updateProduct(id, data)
-      Alert.alert("You have updated this Product!")
+      	}
+      	updateProduct(id, data).then(res => {
+
+        	this.props.navigator.push({
+				id: 'editview'
+			});
+    	})
+      	Alert.alert("You have updated this Product!")
    	};
    render() {
       return (
@@ -57,7 +62,7 @@ export default class EditView extends Component {
 	      	<View>
 			    <ToolbarAndroid style={styles.toolbar} title = {this.props.title} />
 			    <TouchableHighlight  onPress={this.navHome.bind(this)}>
-			    	<Text>Go back to 1</Text>
+			    	<Text style={ao.back}>Go back to 1</Text>
 			    </TouchableHighlight>
 			</View>
 	      	<ListView
@@ -113,7 +118,7 @@ const ao = StyleSheet.create({
   	id :{color:"red", fontSize:20},
   	name :{color:"blue", fontSize:25},
   	price :{color:"black", fontSize:15},
-  	back:{backgroundColor:"blue", color:"white", width:100, padding:15}
+  	back:{backgroundColor:"black", color:"white", width:120, padding:15, fontSize:15}
 });
 
 const styles1 = StyleSheet.create({

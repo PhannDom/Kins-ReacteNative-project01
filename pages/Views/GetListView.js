@@ -44,7 +44,7 @@ export default class GetListView extends Component {
 	      	<View>
 			    <ToolbarAndroid style={styles.toolbar} title = {this.props.title} />
 			    <TouchableHighlight  onPress={this.navHome.bind(this)}>
-			    	<Text>Go back to 1</Text>
+			    	<Text style={ao.back}>Go back to 1</Text>
 			    </TouchableHighlight>
 			</View>
 	      	<ListView
@@ -52,7 +52,7 @@ export default class GetListView extends Component {
 		        renderRow  = {(row)=>
 		        	
 			      		<View style={ao.view}>
-				          	<Text style={ao.id}> ID: {row.id}</Text>
+				          	<Text style={ao.id}> ID: {row._id}</Text>
 				            <Text style={ao.name}> Name: {row.name}</Text>
 				            <Text style={ao.price}> Price: {row.price + '$'}</Text>
 				       </View>
@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
 
 const ao = StyleSheet.create({
 	touch : {flex:1, alignItems:"center", borderWidth:2, borderColor: "red"},
-  	view :{flex:1, backgroundColor:"white", alignItems:"center"},
+  	view :{flex:1, backgroundColor:"white", alignItems:"center", borderWidth:2 , borderColor: "blue"},
   	id :{color:"red", fontSize:20},
   	name :{color:"blue", fontSize:25},
-  	price :{color:"black", fontSize:15},
-  	back:{backgroundColor:"blue", color:"white", width:100, padding:15}
+  	price :{color:"black", fontSize:20},
+  	back:{backgroundColor:"black", color:"white", width:120, padding:15, fontSize:15}
 });
 
 AppRegistry.registerComponent('GetListView', () => GetListView)

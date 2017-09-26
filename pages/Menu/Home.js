@@ -75,42 +75,42 @@ export default class Home extends Component {
       		<View>
       		<ToolbarAndroid style={styles.toolbar} title = {this.props.title} />
       		<TouchableHighlight  onPress={this.navGetListView.bind(this)}>
-      			<Text>List of Products</Text>
+      			<Text style={styles.text}>List of Products</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navPostView.bind(this)}>
-      			<Text>Create a product</Text>
+      			<Text style={styles.text}>Create a product</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navDeleteView.bind(this)}>
-      			<Text>Delete a product</Text>
+      			<Text style={styles.text}>Delete a product</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navEditView.bind(this)}>
-      			<Text>Edit a product</Text>
+      			<Text style={styles.text}>Edit a product</Text>
       		</TouchableHighlight>
       		<Text>--------------------------------------------------------------------------------------------</Text>
       		<TouchableHighlight  onPress={this.navGetListCategoryView.bind(this)}>
-      			<Text>List of Categories</Text>
+      			<Text style={styles.text}>List of Categories</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navPostCategoryView.bind(this)}>
-      			<Text>Create a Category</Text>
+      			<Text style={styles.text}>Create a Category</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navDeleteCategoryView.bind(this)}>
-      			<Text>Delete a Category</Text>
+      			<Text style={styles.text}>Delete a Category</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navEditCategoryView.bind(this)}>
-      			<Text>Edit a Category</Text>
+      			<Text style={styles.text}>Edit a Category</Text>
       		</TouchableHighlight>
       		<Text>--------------------------------------------------------------------------------------------</Text>
       		<TouchableHighlight  onPress={this.navGetListUserView.bind(this)}>
-      			<Text>List of Users</Text>
+      			<Text style={styles.text}>List of Users</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navPostUserView.bind(this)}>
-      			<Text>Create a Users</Text>
+      			<Text style={styles.text}>Create a Users</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navDeleteUserView.bind(this)}>
-      			<Text>Delete a Users</Text>
+      			<Text style={styles.text}>Delete a Users</Text>
       		</TouchableHighlight>
       		<TouchableHighlight  onPress={this.navEditUserView.bind(this)}>
-      			<Text>Edit a Users</Text>
+      			<Text style={styles.text}>Edit a Users</Text>
       		</TouchableHighlight>
       		</View>
       	</View>
@@ -122,6 +122,9 @@ const styles = StyleSheet.create({
 		toolbar: {
 		height: 60,
 		backgroundColor: 'red'
+	},
+	text:{
+		fontSize:20
 	}
 });
 

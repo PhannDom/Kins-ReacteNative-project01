@@ -14,7 +14,7 @@ export default class PostView extends Component {
 	      	<View>
 			    <ToolbarAndroid style={styles.toolbar} title = {this.props.title} />
 			    <TouchableHighlight  onPress={this.navHome.bind(this)}>
-			    	<Text>Go back to 1</Text>
+			    	<Text style={ao.back}>Go back to 1</Text>
 			    </TouchableHighlight>
 			</View>
 	      	<Inputs />
@@ -36,7 +36,7 @@ const ao = StyleSheet.create({
   	id :{color:"red", fontSize:20},
   	title :{color:"blue", fontSize:25},
   	body :{color:"black", fontSize:15},
-  	back:{backgroundColor:"blue", color:"white", width:100, padding:15}
+  	back:{backgroundColor:"black", color:"white", width:120, padding:15, fontSize:15}
 });
 
 AppRegistry.registerComponent('PostView', () => PostView)
